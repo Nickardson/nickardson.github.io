@@ -2,7 +2,7 @@
   <div>
     <section class="container container-circuit">
       <div>
-        <app-logo/>
+        <!-- <app-logo/> -->
         <h1 class="title">
           Taylor Gratzer
         </h1>
@@ -10,18 +10,28 @@
           Full-Stack Dev and Robotics Aficionado
         </h2>
         <div class="links">
-          <a href="https://github.com/Nickardson" class="button--grey" title="Github" target="_blank">
-            GitHub
+          <a href="https://github.com/Nickardson" title="Github" target="_blank">
+            <i class="icon">
+              <svg>
+                <use xlink:href="/assets/icons.min.svg#icon-github"></use>
+              </svg>
+            </i>
           </a>
 
-          <a href="https://www.linkedin.com/in/taylor-g-9bb43896/" class="button--grey" title="LinkedIn" target="_blank">
-            LinkedIn
+          <a href="https://www.linkedin.com/in/taylor-g-9bb43896/" title="LinkedIn" target="_blank">
+            <i class="icon">
+              <svg>
+                <use xlink:href="/assets/icons.min.svg#icon-linkedin"></use>
+              </svg>
+            </i>
           </a>
         </div>
       </div>
+      <a href="#contact" class="down-chevron"><img src="~/assets/chevron-down.svg"/></a>
     </section>
 
-    <section class="container container-dark">
+
+    <section id="contact" class="container container-dark">
       <nuxt-link
         to="/contact">
         <i class="icon">
@@ -55,6 +65,7 @@ export default {
   justify-content: center;
   align-items: center;
   text-align: center;
+  position: relative;
 }
 
 .container-circuit {
@@ -88,10 +99,52 @@ export default {
 
 .links {
   padding-top: 15px;
+  padding-bottom: 15px;
 }
 
-.icon {
-  font-size: 5em;
+.links a {
+  display: inline-block;
+  padding: 0.25em;
+  margin: 0.5em;
 }
 
+.links .icon {
+  font-size: 5rem;
+}
+
+.links .icon:hover {
+  opacity: 0.8;
+}
+
+.down-chevron {
+  /* TODO: determine compatibility */
+  position: fixed;
+  bottom: 1em;
+}
+
+.down-chevron > img {
+  width: 2em;
+  height: 2em;
+}
+
+.down-chevron:hover {
+  opacity: 0.5;
+}
+
+/* You're already needing to scroll at this point */
+@media screen and (max-height: 400px) {
+  .down-chevron {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 700px) {
+  .title {
+    font-size: 60px;
+  }
+
+  .subtitle {
+    font-size: 24px;
+  }
+}
 </style>
