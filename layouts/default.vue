@@ -47,6 +47,7 @@ html {
 
 body {
   min-height: 100vh;
+  overflow-y: scroll;
 }
 
 .flex-container-wrapper {
