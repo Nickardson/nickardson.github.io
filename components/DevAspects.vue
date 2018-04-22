@@ -24,7 +24,7 @@
 
 .dev-aspect {
   align-content: center;
-  flex: 1;
+  flex-grow: 1;
   padding: 1em;
   max-width: 400px;
 }

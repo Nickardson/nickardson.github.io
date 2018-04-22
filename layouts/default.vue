@@ -55,7 +55,7 @@ html {
 }
 
 .main-content {
-  flex: 1;
+  flex-grow: 1;
 }
 
 /* Navigation */
@@ -108,7 +108,7 @@ a:hover {
   }
 
   .bottom-navigation {
-    flex: 1;
+    flex-grow: 1;
     justify-content: space-around;
   }
 }
