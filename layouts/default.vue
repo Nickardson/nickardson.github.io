@@ -1,29 +1,31 @@
 <template>
-  <div class="main-body">
-    <nav class="navigation top-navigation section-dark">
-      <nuxt-link to="/">Intro</nuxt-link>
-      <div class="navigation-separator">/</div>
-      <nuxt-link to="/work">Work</nuxt-link>
-      <div class="navigation-separator">/</div>
-      <nuxt-link to="/skills">Skills</nuxt-link>
-      <div class="navigation-separator">/</div>
-      <nuxt-link to="/contact">Contact</nuxt-link>
-    </nav>
-
-    <main class="main-content">
-      <nuxt/>
-    </main>
-
-    <footer class="end-footer">
-      <div class="navigation bottom-navigation">
-        <a href="https://github.com/Nickardson" title="Github" target="_blank">GitHub</a>
-        <div class="navigation-separator">&bull;</div>
-        <a href="https://www.linkedin.com/in/taylor-g-9bb43896/" title="LinkedIn" target="_blank">LinkedIn</a>
-
-        <div class="navigation-separator">&bull;</div>
+  <div class="flex-container-wrapper">
+    <div class="main-body">
+      <nav class="navigation top-navigation section-dark">
+        <nuxt-link to="/">Intro</nuxt-link>
+        <div class="navigation-separator">/</div>
+        <nuxt-link to="/work">Work</nuxt-link>
+        <div class="navigation-separator">/</div>
+        <nuxt-link to="/skills">Skills</nuxt-link>
+        <div class="navigation-separator">/</div>
         <nuxt-link to="/contact">Contact</nuxt-link>
-      </div>
-    </footer>
+      </nav>
+
+      <main class="main-content">
+        <nuxt/>
+      </main>
+
+      <footer class="end-footer">
+        <div class="navigation bottom-navigation">
+          <a href="https://github.com/Nickardson" title="Github" target="_blank">GitHub</a>
+          <div class="navigation-separator">&bull;</div>
+          <a href="https://www.linkedin.com/in/taylor-g-9bb43896/" title="LinkedIn" target="_blank">LinkedIn</a>
+
+          <div class="navigation-separator">&bull;</div>
+          <nuxt-link to="/contact">Contact</nuxt-link>
+        </div>
+      </footer>
+    </div>
   </div>
 </template>
 
@@ -41,6 +43,15 @@ html {
   box-sizing: border-box;
   background-color: #f3f5f6;
   color: #35495e;
+}
+
+body {
+  min-height: 100vh;
+}
+
+.flex-container-wrapper {
+  display: flex;
+  flex-direction: column;
 }
 
 .main-body {
