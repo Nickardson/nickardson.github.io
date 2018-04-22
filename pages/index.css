@@ -1,0 +1,41 @@
+.links {
+  padding-top: 15px;
+  padding-bottom: 15px;
+  text-align: center;
+}
+
+.links a {
+  display: inline-block;
+  padding: 0.25em;
+  margin: 0.5em;
+}
+
+.links a:hover {
+  text-decoration: none;
+  border: none;
+}
+
+.links .icon {
+  font-size: 4rem;
+}
+
+.links .icon:hover {
+  opacity: 0.8;
+}
+
+/* You're already needing to scroll at this point */
+@media screen and (max-height: 400px) {
+  .down-chevron {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 700px) {
+  .title {
+    font-size: 60px;
+  }
+
+  .subtitle {
+    font-size: 24px;
+  }
+}

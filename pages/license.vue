@@ -18,7 +18,7 @@ export default {
 }
 </script>
 
-<style>
+<style scoped lang="css">
 .links {
   padding-top: 15px;
 }
