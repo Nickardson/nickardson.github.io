@@ -193,9 +193,10 @@ h2 {
 /* Footer */
 
 .end-footer {
-  padding-bottom: 1em;
+  padding: 1em 0 1em 0;
   display: flex;
   justify-content: center;
+  border-top: 1px solid #CFD8DC;
 }
 
 /* Interaction */

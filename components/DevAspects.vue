@@ -20,7 +20,6 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
-  padding: 0 3em 0 3em;
 }
 
 .dev-aspect {
