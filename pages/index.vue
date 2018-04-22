@@ -4,11 +4,10 @@
       <h1 class="title">
         Taylor Gratzer
       </h1>
-
-      <h2 class="subtitle">Full-stack Developer &amp;<br/><a href="https://www.firstinspires.org/robotics/frc" class="subtle-link" target="_blank">FIRST Robotics</a> Alumni</h2>
     </section>
 
-    <section>
+    <section class="section-pad">
+      <h2 class="subtitle">Full-stack Developer &amp;<br/><a href="https://www.firstinspires.org/robotics/frc" class="subtle-link" target="_blank">FIRST Robotics</a> Alumni</h2>
       <div class="links">
         <a href="https://github.com/Nickardson" title="Github" target="_blank">
           <i class="icon">
@@ -31,7 +30,8 @@
       </div>
     </section>
 
-    <section id="contact" class="container-dark">
+    <section id="brief-intro" class="container-dark">
+      <Dev-Aspects></Dev-Aspects>
     </section>
 
     <!-- TODO: give attribution or get rid of the icons -->
@@ -46,11 +46,13 @@
 <script>
 // import AppLogo from "~/components/AppLogo.vue";
 import Icons8Attribution from "~/components/Icons8Attribution.vue";
+import DevAspects from "~/components/DevAspects.vue";
 
 export default {
   components: {
     // AppLogo,
-    Icons8Attribution
+    Icons8Attribution,
+    DevAspects,
   }
 };
 </script>

@@ -39,7 +39,8 @@ html {
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
   box-sizing: border-box;
-  background-color: #CFD8DC;
+  background-color: #f3f5f6;
+  color: #35495e;
 }
 
 .main-body {
@@ -180,11 +181,12 @@ h2 {
   color: #FFFFFF;
 }
 
-.subtitle {
+.section-dark .subtitle {
   color: #CFD8DC;
 }
 
 .section-pad {
+  padding-top: 2em;
   padding-bottom: 2em;
 }
 
