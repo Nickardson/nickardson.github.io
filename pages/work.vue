@@ -133,12 +133,6 @@ export default {
       }
 
       return value
-        .map(v =>
-          v.toLocaleString("en-US", {
-            month: "long",
-            year: "numeric"
-          })
-        )
         .join(" - ");
     }
   },
@@ -148,7 +142,7 @@ export default {
         {
           name: "CodeCraft Partner Community",
 
-          time: [new Date(2018, 1 - 1), new Date(2018, 4 - 1)],
+          time: ['January 2018', 'April 2018'],
 
           badges: [
             {
@@ -179,12 +173,12 @@ export default {
 
         {
           name: "Numerous Assorted Projects",
-          time: [new Date(2012, 1 - 1), new Date(Date.now())]
+          time: ['2012', 'Now']
         },
 
         {
           name: "World Travelogue Database",
-          time: [new Date(2016, 1 - 1), new Date(2016, 4 - 1)],
+          time: ['January 2016', 'April 2016'],
           badges: [
             { name: "SQLite" },
             { name: "Java" },
