@@ -150,12 +150,10 @@ a:hover {
 /* Body Content */
 
 .container {
-  min-height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  position: relative;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 1em;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -200,6 +198,10 @@ h2 {
 .section-pad {
   padding-top: 2em;
   padding-bottom: 2em;
+}
+
+.section-pad-half {
+  padding-top: 2em;
 }
 
 /* Abbreviations */
