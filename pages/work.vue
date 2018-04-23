@@ -62,10 +62,10 @@
 }
 
 .project-list {
-  max-width: 800px;
   display: flex;
-  flex-grow: 1;
+  flex-grow: 0;
   flex-direction: column;
+  overflow-y: auto;
 }
 
 .project-image {
@@ -78,8 +78,10 @@
 }
 
 .project {
+  width: 800px;
   flex-grow: 1;
   padding: 1em 0.5em 2em 0.5em;
+  overflow-y: auto;
 }
 
 .project-description {
