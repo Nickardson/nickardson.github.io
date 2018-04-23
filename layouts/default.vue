@@ -5,8 +5,8 @@
         <nuxt-link to="/">Intro</nuxt-link>
         <div class="navigation-separator">/</div>
         <nuxt-link to="/work">Work</nuxt-link>
-        <div class="navigation-separator">/</div>
-        <nuxt-link to="/skills">Skills</nuxt-link>
+        <!-- <div class="navigation-separator">/</div>
+        <nuxt-link to="/skills">Skills</nuxt-link> -->
         <div class="navigation-separator">/</div>
         <nuxt-link to="/contact">Contact</nuxt-link>
       </nav>
