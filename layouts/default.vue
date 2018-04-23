@@ -19,7 +19,7 @@
         <div class="navigation bottom-navigation">
           <a href="https://github.com/Nickardson" title="Github" target="_blank" rel="noopener">GitHub</a>
           <span class="navigation-separator"> &bull; </span>
-          <a href="https://www.linkedin.com/in/taylor-g-9bb43896/" title="LinkedIn" target="_blank" rel="noopener">LinkedIn</a>
+          <a href="https://www.linkedin.com/in/taylor-g-9bb43896/" title="My LinkedIn" target="_blank" rel="noopener">LinkedIn</a>
 
           <span class="navigation-separator"> &bull; </span>
           <nuxt-link to="/contact">Contact</nuxt-link>
