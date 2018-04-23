@@ -89,7 +89,7 @@ a:hover {
 }
 
 .navigation-separator {
-  display: inline-block;
+  display: inline;
   margin: 0 1em 0 1em;
 }
 
