@@ -3,7 +3,9 @@
     <div class="columns">
       <div v-for="(aspect, index) of aspects" :key="aspect.name" class="dev-aspect">
         <h3 class="dev-aspect-header"><span class="dev-aspect-number">#{{index + 1}}</span> {{aspect.name}}</h3>
-        <p class="dev-aspect-description">{{aspect.description}}</p>
+        <p
+          v-html="aspect.description"
+          class="dev-aspect-description"></p>
       </div>
     </div>
   </div>
@@ -59,14 +61,17 @@ export default {
       aspects: [
         {
           name: "Design",
-          description: "Familiar with UI / UX practices, software design patterns, separation of concerns, and system architecture."
+          description: `
+            Familiar with <abbr title="User Interface">UI</abbr> / <abbr title="User Experience">UX</abbr> practices,
+            software design patterns, separation of concerns, and system architecture.
+          `
         },
         {
           name: "Development",
           description: "Strong technical acumen across a variety of software domains and languages, with a knack for quickly adapting to new technologies."
         },
         {
-          name: "Devops",
+          name: "Dev-ops",
           description: "Experienced in Continuous Integration and Deployment (CI/CD), automated gated releases to Azure, and application metric monitoring."
         }
       ]

@@ -17,9 +17,9 @@
 
       <footer class="end-footer">
         <div class="navigation bottom-navigation">
-          <a href="https://github.com/Nickardson" title="Github" target="_blank">GitHub</a>
+          <a href="https://github.com/Nickardson" title="Github" target="_blank" rel="noopener">GitHub</a>
           <div class="navigation-separator">&bull;</div>
-          <a href="https://www.linkedin.com/in/taylor-g-9bb43896/" title="LinkedIn" target="_blank">LinkedIn</a>
+          <a href="https://www.linkedin.com/in/taylor-g-9bb43896/" title="LinkedIn" target="_blank" rel="noopener">LinkedIn</a>
 
           <div class="navigation-separator">&bull;</div>
           <nuxt-link to="/contact">Contact</nuxt-link>
@@ -200,6 +200,32 @@ h2 {
 .section-pad {
   padding-top: 2em;
   padding-bottom: 2em;
+}
+
+/* Abbreviations */
+
+abbr[title] {
+  font-variant: normal;
+  border: none;
+  text-decoration: none;
+}
+
+abbr[title]:after
+{
+  content: " (" attr(title) ")";
+  text-decoration: none;
+}
+
+@media screen and (min-width: 1025px)
+{
+  abbr[title] {
+    border-bottom: 1px dotted gray;
+  }
+
+  abbr[title]:after
+  {
+    content: "";
+  }
 }
 
 /* Footer */

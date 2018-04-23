@@ -11,6 +11,9 @@
   </section>
 </template>
 
+<style scoped lang="css">
+</style>
+
 <script>
 import AppLogo from '~/components/AppLogo.vue'
 
@@ -20,7 +23,3 @@ export default {
   }
 }
 </script>
-
-<style scoped lang="css">
-
-</style>
