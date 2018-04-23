@@ -3,11 +3,11 @@
     <div class="main-body">
       <nav class="navigation top-navigation section-dark">
         <nuxt-link to="/">Intro</nuxt-link>
-        <div class="navigation-separator">/</div>
+        <span class="navigation-separator"> / </span>
         <nuxt-link to="/work">Work</nuxt-link>
-        <!-- <div class="navigation-separator">/</div>
+        <!-- <span class="navigation-separator"> / </span>
         <nuxt-link to="/skills">Skills</nuxt-link> -->
-        <div class="navigation-separator">/</div>
+        <span class="navigation-separator"> / </span>
         <nuxt-link to="/contact">Contact</nuxt-link>
       </nav>
 
@@ -18,10 +18,10 @@
       <footer class="end-footer">
         <div class="navigation bottom-navigation">
           <a href="https://github.com/Nickardson" title="Github" target="_blank" rel="noopener">GitHub</a>
-          <div class="navigation-separator">&bull;</div>
+          <span class="navigation-separator"> &bull; </span>
           <a href="https://www.linkedin.com/in/taylor-g-9bb43896/" title="LinkedIn" target="_blank" rel="noopener">LinkedIn</a>
 
-          <div class="navigation-separator">&bull;</div>
+          <span class="navigation-separator"> &bull; </span>
           <nuxt-link to="/contact">Contact</nuxt-link>
         </div>
       </footer>
