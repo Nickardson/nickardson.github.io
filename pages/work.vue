@@ -27,15 +27,17 @@
 
             <a
               v-if="project.image"
-              :href="project.image"
+              :href="project.imageFallback || project.image"
               target="_blank"
               rel="noopener">
-              <img
-                :src="project.image"
-                :alt="project.name + ' Project Image'"
-                class="project-image"/>
+              <picture v-if="project.imageFallback">
+                <source :srcset="encodeURI(project.image)" type="image/webp">
+                <img :src="project.imageFallback" :alt="project.name + ' Project Image'" class="project-image">
+              </picture>
+
+              <img v-if="!project.imageFallback" :src="project.image" :alt="project.name + ' Project Image'" class="project-image">
             </a>
-            
+
             <div
               v-if="project.description"
               v-html="project.description"
@@ -168,12 +170,14 @@ export default {
             
             <p>Firebase Realtime Database means that any change to the site's data is near-instanteously updated for all users.</p>
           `,
-          image: "/assets/work/PartnerCommunity/Instructors.png"
+
+          image: "/assets/work/PartnerCommunity/Instructors.webp",
+          imageFallback: "/assets/work/PartnerCommunity/Instructors.png",
         },
 
         {
           name: "Numerous Assorted Projects",
-          time: [new Date(2012, 1 - 1), new Date(Date.now())],
+          time: [new Date(2012, 1 - 1), new Date(Date.now())]
         },
 
         {
@@ -191,11 +195,14 @@ export default {
             <p>The application can behave as either a personal desktop application,
             or be hosted on a dedicated server to allow multiple users to login and enter travel journals.</p>
           `,
-          image: "/assets/work/World Travel Database.png"
+
+          image: "/assets/work/World Travel Database.webp",
+          imageFallback: "/assets/work/World Travel Database.png",
+
           // caseStudy: "/work/travelogue"
         }
       ]
     };
-  },
+  }
 };
 </script>
