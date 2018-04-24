@@ -220,7 +220,7 @@ export default {
             This fictional microprocessor has an assembly-like instruction set, and runs programs in unusual grid-based "CPU"s.</p>
             <p>The game's puzzles are defined in a Lua script to allow for complex, sandboxed user-defined specifications.
             My emulator also loads these user-defined puzzles using lua.vm.js.</p>
-            <p><a href="http://tgratzer.com/TIS-100-Emulator/" target="_blank" rel="noopener">See this project online</a></p>
+            <p><a href="http://tis100.tgratzer.com/" target="_blank" rel="noopener">See this project online</a></p>
           `,
 
           image: "/assets/work/TIS100 Emulator.webp",
