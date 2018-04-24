@@ -27,7 +27,7 @@
 
             <a
               v-if="project.image"
-              :href="project.imageFallback || project.image"
+              :href="project.imageFull || project.imageFallback || project.image"
               target="_blank"
               rel="noopener">
               <picture v-if="project.imageFallback">
@@ -140,6 +140,62 @@ export default {
     return {
       projects: [
         {
+          name: "FRC (First Robotics Competition) Team 1557",
+
+          time: ['2012', '2016'],
+
+          badges: [
+            {
+              name: "Leadership"
+            },
+            {
+              name: "Robotics"
+            },
+            {
+              name: "Computer Vision"
+            },
+            {
+              name: "Electrical Engineering"
+            },
+            {
+              name: "Mechanical Engineering"
+            },
+            {
+              name: "Java"
+            },
+            {
+              name: "LabVIEW"
+            },
+          ],
+
+          description: `
+            <p>FIRST Robotics taught me a <em>lot</em> about teamwork, programming, industry practices, leadership, and more.</p>
+
+            <p>I joined 12 Volt Bolt (FRC Team 1557) in 2012. Throughout the first year, I assisted in all areas of the team and fell in love with the fun and challenge of FIRST robotics.</p>
+
+            <p>The next year, the team's other programmers aged out (high school students only).
+
+            I stepped up as team lead programmer; we worked heavily on our autonomous robot control,
+            and began experimenting with computer vision to detect highlighted goals.
+            
+            Our FRC team was open to all local kids, and was not sponsored by a school.
+            Because of this, we worked heavily on community outreach to discover new members, and attracting sponsors to pay for the team clubhouse, robot parts, and large competition fees.</p>
+
+            <p>Over the next year, we worked to grow our team, and my leadership and teaching roles expanded.
+            12 Volt Bolt stepped up our robot's design with new fabrication tools, and I also assisted heavily with the electrical wiring and control board setup.</p>
+
+            <p>In 2015 and 2016, I had aged out of being an FRC Student. I began mentoring the programming sub-team,
+            teaching students not just programming syntax, but also software-oriented architecture, design, and critical thinking.
+            This was a fulfilling experience which gave me an opportunity learn about teaching and leadership,
+            and allowed me to help the team which had given me so much.</p>
+          `,
+
+          imageFull: "/assets/work/FRC.jpg",
+          image: "/assets/work/FRC-small.webp",
+          imageFallback: "/assets/work/FRC-small.jpg",
+        },
+
+        {
           name: "CodeCraft Partner Community",
 
           time: ['January 2018', 'April 2018'],
@@ -164,7 +220,7 @@ export default {
 
             <p>The site allows CodeCraft instructors to set up a profile, and allows CodeCraft partners to post when they are offering coding courses.</p>
             
-            <p>Firebase Realtime Database means that any change to the site's data is near-instanteously updated for all users.</p>
+            <p>Firebase Realtime Database means that any change to the site's data is near-instantaneously updated for all users.</p>
           `,
 
           image: "/assets/work/PartnerCommunity/Instructors.webp",
@@ -173,7 +229,12 @@ export default {
 
         {
           name: "Numerous Assorted Projects",
-          time: ['2012', 'Now']
+          time: ['2010', 'Now!'],
+          description: `
+            This page is by no means complete or exhaustive.
+            I've worked on a wide variety of school, work, and personal projects across many software and hardware domains.
+            Feel free to browse my GitHub page to see other projects I've developed or contributed to.
+          `
         },
 
         {
@@ -254,7 +315,7 @@ export default {
         },
 
         {
-          name: "FRC Team 1557 'Dots'",
+          name: "'Dots' Team Pit Display",
 
           time: ['January 2014'],
 
@@ -274,6 +335,8 @@ export default {
           image: "/assets/work/Dots.webp",
           imageFallback: "/assets/work/Dots.png",
         },
+
+        // TODO: Kinect FRC pit interactive display
       ]
     };
   }
