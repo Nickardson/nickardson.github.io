@@ -177,6 +177,32 @@ export default {
         },
 
         {
+          name: "AgriCraft Mutation Graph",
+
+          time: ['May 2016'],
+
+          badges: [
+            {
+              name: "Web Development"
+            },
+            {
+              name: "Graph Theory"
+            }
+          ],
+
+          description: `
+            <p>Shows the genealogy required to breed plants in the AgriCraft Minecraft mod.</p>
+            <p>To get Coffee, you need Sugarcane and Beans. To get Beans, you need Pumpkins. To get pumpkins, you need Potatoes.
+            This (nonsensical) breeding tree can get complex, so the graph helps show what's needed to get a desired result.
+            The loose graph can be dragged around, or the graph re-ordered with the desired product on top of the tree.</p>
+            <p><a href="http://tgratzer.com/AgriCraft-Mutation-Graph/" target="_blank" rel="noopener">See this project online</a></p>
+          `,
+
+          image: "/assets/work/Agricraft.webp",
+          imageFallback: "/assets/work/Agricraft.png",
+        },
+
+        {
           name: "World Travelogue Database",
           time: ['January 2016', 'April 2016'],
           badges: [
