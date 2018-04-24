@@ -252,6 +252,28 @@ export default {
           image: "/assets/work/TIS100 Emulator.webp",
           imageFallback: "/assets/work/TIS100 Emulator.png",
         },
+
+        {
+          name: "FRC Team 1557 'Dots'",
+
+          time: ['January 2014'],
+
+          badges: [
+            {
+              name: "Web Development"
+            },
+          ],
+
+          description: `
+            <p>A cellular automata simulation designed to mesmerize. This was on display at the '14 FRC competition, in Team 1557's (12 Volt Bolt) pit area.</p>
+            <p>The dots are rendered on an HTML canvas, and each game team represents an FRC team present at the competition.
+            The dots will apply strategies to eliminate weak teams, save themselves, and cluster together.</p>
+            <p><a href="http://tgratzer.com/team1557-dots/" target="_blank" rel="noopener">See this project online</a></p>
+          `,
+
+          image: "/assets/work/Dots.webp",
+          imageFallback: "/assets/work/Dots.png",
+        },
       ]
     };
   }
