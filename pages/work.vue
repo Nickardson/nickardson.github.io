@@ -260,7 +260,7 @@ export default {
           `,
 
           image: "/assets/work/Agricraft.webp",
-          imageFallback: "/assets/work/Agricraft.png",
+          imageFallback: "/assets/work/Agricraft.PNG",
         },
 
         {
@@ -311,7 +311,7 @@ export default {
           `,
 
           image: "/assets/work/TIS100 Emulator.webp",
-          imageFallback: "/assets/work/TIS100 Emulator.png",
+          imageFallback: "/assets/work/TIS100 Emulator.PNG",
         },
 
         {
@@ -333,7 +333,7 @@ export default {
           `,
 
           image: "/assets/work/Dots.webp",
-          imageFallback: "/assets/work/Dots.png",
+          imageFallback: "/assets/work/Dots.PNG",
         },
 
         // TODO: Kinect FRC pit interactive display
