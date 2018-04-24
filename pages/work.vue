@@ -196,7 +196,36 @@ export default {
           imageFallback: "/assets/work/World Travel Database.png",
 
           // caseStudy: "/work/travelogue"
-        }
+        },
+
+        {
+          name: "TIS-100 Emulator",
+
+          time: ['September 2015', 'December 2015'],
+
+          badges: [
+            {
+              name: "Web Development"
+            },
+            {
+              name: "Domain-Specific Language"
+            },
+            {
+              name: "Lua"
+            }
+          ],
+
+          description: `
+            <p>A web emulator for <a href="http://www.zachtronics.com/tis-100/" target="_blank" rel="noopener">TIS-100</a>.
+            This fictional microprocessor has an assembly-like instruction set, and runs programs in unusual grid-based "CPU"s.</p>
+            <p>The game's puzzles are defined in a Lua script to allow for complex, sandboxed user-defined specifications.
+            My emulator also loads these user-defined puzzles using lua.vm.js.</p>
+            <p><a href="http://tgratzer.com/TIS-100-Emulator/" target="_blank" rel="noopener">See this project online</a></p>
+          `,
+
+          image: "/assets/work/TIS100 Emulator.webp",
+          imageFallback: "/assets/work/TIS100 Emulator.png",
+        },
       ]
     };
   }
