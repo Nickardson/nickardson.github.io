@@ -68,6 +68,8 @@ export default {
         'Angular 5': { b: '#c3002f' },
         'TypeScript': { b: '#007acc' },
         'Firebase Realtime Database': { b: '#ffcb2c', f: 'black' },
+        'Lua': { b: '#000080' },
+        'Robotics': { b: '#FF6F00' },
       }
     };
   },

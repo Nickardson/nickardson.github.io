@@ -155,39 +155,40 @@ export default {
               name: "Computer Vision"
             },
             {
-              name: "Electrical Engineering"
+              name: "Engineering"
             },
-            {
-              name: "Mechanical Engineering"
-            },
+            // {
+            //   name: "Electrical Engineering"
+            // },
+            // {
+            //   name: "Mechanical Engineering"
+            // },
             {
               name: "Java"
             },
-            {
-              name: "LabVIEW"
-            },
+            // {
+            //   name: "LabVIEW"
+            // },
           ],
 
           description: `
-            <p>FIRST Robotics taught me a <em>lot</em> about teamwork, programming, industry practices, leadership, and more.</p>
+            <p>FIRST Robotics taught me a lot about teamwork, programming, industry practices and leadership.</p>
 
-            <p>I joined 12 Volt Bolt (FRC Team 1557) in 2012. Throughout the first year, I assisted in all areas of the team and fell in love with the fun and challenge of FIRST robotics.</p>
+            <p>I joined 12 Volt Bolt (FRC Team 1557) in 2012. Immediately I fell in love with the fun and challenge of FIRST robotics.</p>
 
-            <p>The next year, the team's other programmers aged out (high school students only).
+            <p>The next year, I stepped up as team lead programmer.
+            We worked heavily on autonomous robot control, and began using computer vision to detect highlighted goals.
 
-            I stepped up as team lead programmer; we worked heavily on our autonomous robot control,
-            and began experimenting with computer vision to detect highlighted goals.
-            
-            Our FRC team was open to all local kids, and was not sponsored by a school.
-            Because of this, we worked heavily on community outreach to discover new members, and attracting sponsors to pay for the team clubhouse, robot parts, and large competition fees.</p>
+            Our FRC team was not sponsored by a school, so we worked heavily on community outreach to discover new members and
+            attract sponsors, so we could pay for robot parts and the robotics competition.</p>
 
-            <p>Over the next year, we worked to grow our team, and my leadership and teaching roles expanded.
+            <p>We worked to grow our team, and my leadership and teaching roles expanded.
             12 Volt Bolt stepped up our robot's design with new fabrication tools, and I also assisted heavily with the electrical wiring and control board setup.</p>
 
-            <p>In 2015 and 2016, I had aged out of being an FRC Student. I began mentoring the programming sub-team,
-            teaching students not just programming syntax, but also software-oriented architecture, design, and critical thinking.
+            <p>In 2015 and 2016, I began mentoring the programming sub-team,
+            teaching students programming, software architecture, design and critical thinking.
             This was a fulfilling experience which gave me an opportunity learn about teaching and leadership,
-            and allowed me to help the team which had given me so much.</p>
+            and to help the team which had given me so much.</p>
           `,
 
           imageFull: "/assets/work/FRC.jpg",
@@ -230,60 +231,81 @@ export default {
         {
           name: "Numerous Assorted Projects",
           time: ['2010', 'Now!'],
-          description: `
+          description: `<p>
             This page is by no means complete or exhaustive.
             I've worked on a wide variety of school, work, and personal projects across many software and hardware domains.
             Feel free to browse my GitHub page to see other projects I've developed or contributed to.
-          `
+          </p>`
         },
 
         {
-          name: "AgriCraft Mutation Graph",
+          name: "SHENZHEN I/O Solitaire",
 
-          time: ['May 2016'],
+          time: ['November 2016', 'April 2017'],
 
           badges: [
             {
               name: "Web Development"
             },
-            {
-              name: "Graph Theory"
-            }
           ],
 
           description: `
-            <p>Shows the genealogy required to breed plants in the AgriCraft Minecraft mod.</p>
-            <p>To get Coffee, you need Sugarcane and Beans. To get Beans, you need Pumpkins. To get pumpkins, you need Potatoes.
-            This (nonsensical) breeding tree can get complex, so the graph helps show what's needed to get a desired result.
-            The loose graph can be dragged around, or the graph re-ordered with the desired product on top of the tree.</p>
-            <p><a href="http://tgratzer.com/AgriCraft-Mutation-Graph/" target="_blank" rel="noopener">See this project online</a></p>
+            <p>A web project made to emulate the gameplay of <a href="https://store.steampowered.com/app/570490/SHENZHEN_SOLITAIRE/" target="_blank" rel="noopener">SHENZHEN Solitaire</a>.
+            Can pull resources from the real game, to get the minigame experience without booting up Steam.</p>
+            <p>Also has nice animations for when cards are flying around, and a classic solitaire win animation.</p>
           `,
 
-          image: "/assets/work/Agricraft.webp",
-          imageFallback: "/assets/work/Agricraft.PNG",
+          image: "/assets/work/ShenzhenSolitaire.webp",
+          imageFallback: "/assets/work/ShenzhenSolitaire.jpg",
         },
 
-        {
-          name: "World Travelogue Database",
-          time: ['January 2016', 'April 2016'],
-          badges: [
-            { name: "SQLite" },
-            { name: "Java" },
-            { name: "Web Development" }
-          ],
-          description: `
-            <p>A web-based application to record a travelogue of places visited,
-            allowing image uploads, map locations, and sharing with other users.</p>
+        // {
+        //   name: "AgriCraft Mutation Graph",
 
-            <p>The application can behave as either a personal desktop application,
-            or be hosted on a dedicated server to allow multiple users to login and enter travel journals.</p>
-          `,
+        //   time: ['May 2016'],
 
-          image: "/assets/work/World Travel Database.webp",
-          imageFallback: "/assets/work/World Travel Database.png",
+        //   badges: [
+        //     {
+        //       name: "Web Development"
+        //     },
+        //     {
+        //       name: "Graph Theory"
+        //     }
+        //   ],
 
-          // caseStudy: "/work/travelogue"
-        },
+        //   description: `
+        //     <p>Shows the genealogy required to breed plants in the AgriCraft Minecraft mod.</p>
+        //     <p>To get Coffee, you need Sugarcane and Beans. To get Beans, you need Pumpkins. To get pumpkins, you need Potatoes.
+        //     This (nonsensical) breeding tree can get complex, so the graph helps show what's needed to get a desired result.
+        //     The loose graph can be dragged around, or the graph re-ordered with the desired product on top of the tree.</p>
+        //     <p><a href="http://tgratzer.com/AgriCraft-Mutation-Graph/" target="_blank" rel="noopener">See this project online</a></p>
+        //   `,
+
+        //   image: "/assets/work/Agricraft.webp",
+        //   imageFallback: "/assets/work/Agricraft.PNG",
+        // },
+
+        // {
+        //   name: "World Travelogue Database",
+        //   time: ['January 2016', 'April 2016'],
+        //   badges: [
+        //     { name: "SQLite" },
+        //     { name: "Java" },
+        //     { name: "Web Development" }
+        //   ],
+        //   description: `
+        //     <p>A web-based application to record a travelogue of places visited,
+        //     allowing image uploads, map locations, and sharing with other users.</p>
+
+        //     <p>The application can behave as either a personal desktop application,
+        //     or be hosted on a dedicated server to allow multiple users to login and enter travel journals.</p>
+        //   `,
+
+        //   image: "/assets/work/World Travel Database.webp",
+        //   imageFallback: "/assets/work/World Travel Database.png",
+
+        //   // caseStudy: "/work/travelogue"
+        // },
 
         {
           name: "TIS-100 Emulator",
@@ -305,7 +327,7 @@ export default {
           description: `
             <p>A web emulator for <a href="http://www.zachtronics.com/tis-100/" target="_blank" rel="noopener">TIS-100</a>.
             This fictional microprocessor has an assembly-like instruction set, and runs programs in unusual grid-based "CPU"s.</p>
-            <p>The game's puzzles are defined in a Lua script to allow for complex, sandboxed user-defined specifications.
+            <p>The game's puzzles are defined in a Lua script to allow for complex, sand&shy;boxed user-defined specifications.
             My emulator also loads these user-defined puzzles using lua.vm.js.</p>
             <p><a href="http://tis100.tgratzer.com/" target="_blank" rel="noopener">See this project online</a></p>
           `,
