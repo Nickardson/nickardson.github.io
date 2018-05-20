@@ -128,8 +128,8 @@ a:hover {
 
 .top-navigation {
   text-align: center;
-  padding-top: 2em;
-  padding-bottom: 2em;
+  padding-top: 0.5em;
+  padding-bottom: 1em;
 }
 
 .top-navigation > a {
@@ -177,7 +177,7 @@ h2 {
 }
 
 .title {
-  font-size: 72px;
+  font-size: 60px;
   color: #35495e;
   margin-bottom: 0.5em;
   letter-spacing: -1px;
@@ -197,8 +197,8 @@ h2 {
 }
 
 .section-pad {
-  padding-top: 2em;
-  padding-bottom: 2em;
+  padding-top: 0.5em;
+  padding-bottom: 0.5em;
 }
 
 .section-pad-half {
@@ -228,6 +228,16 @@ abbr[title]:after
   abbr[title]:after
   {
     content: "";
+  }
+}
+
+@media screen and (max-width: 700px) {
+  .title {
+    font-size: 56px;
+  }
+
+  .subtitle {
+    font-size: 32px;
   }
 }
 

@@ -23,22 +23,7 @@
   opacity: 0.8;
 }
 
-/* You're already needing to scroll at this point */
-@media screen and (max-height: 400px) {
-  .down-chevron {
-    display: none;
-  }
-}
-
 @media screen and (max-width: 700px) {
-  .title {
-    font-size: 56px;
-  }
-
-  .subtitle {
-    font-size: 32px;
-  }
-
   .links .icon {
     font-size: 3rem;
   }
