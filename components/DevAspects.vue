@@ -61,7 +61,7 @@
 
 @media screen and (max-width: 1000px) {
   .dev-aspect {
-    flex-basis: 100%;
+    flex-basis: auto;
     max-width: inherit;
 
     margin: 5px 20px 5px 20px;
