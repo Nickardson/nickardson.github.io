@@ -5,7 +5,7 @@
       :key="badge.name"
       :style="{ 'background-color': getBackgroundColor(badge.name), 'color': getForegroundColor(badge.name) }"
       class="dev-badge">
-      <h3 class="dev-badge-header">{{badge.name}}</h3>
+      <div class="dev-badge-header">{{badge.name}}</div>
     </div>
   </div>
 </template>

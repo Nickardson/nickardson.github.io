@@ -1,15 +1,20 @@
 <template>
   <div>
-    <section class="section-dark section-pad">
+    <section>
       <h1 class="title">
         Work Examples
       </h1>
+    </section>
+
+    <section>
       <h2 class="subtitle">
         Demos, Case Studies, Technologies
       </h2>
     </section>
 
-    <section class="section-pad">
+    <section>
+      <hr class="separator">
+
       <div class="project-list-container">
         <div class="project-list">
           <div

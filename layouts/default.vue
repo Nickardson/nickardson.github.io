@@ -1,30 +1,13 @@
 <template>
   <div class="flex-container-wrapper">
     <div class="main-body">
-      <nav class="navigation top-navigation section-dark">
-        <nuxt-link to="/">Intro</nuxt-link>
-        <span class="navigation-separator"> / </span>
-        <nuxt-link to="/work">Work</nuxt-link>
-        <!-- <span class="navigation-separator"> / </span>
-        <nuxt-link to="/skills">Skills</nuxt-link> -->
-        <span class="navigation-separator"> / </span>
-        <nuxt-link to="/contact">Contact</nuxt-link>
-      </nav>
+      <Navbar></Navbar>
 
       <main class="main-content">
         <nuxt/>
       </main>
 
-      <footer class="end-footer">
-        <div class="navigation bottom-navigation">
-          <a href="https://github.com/Nickardson" title="Github" target="_blank" rel="noopener">GitHub</a>
-          <span class="navigation-separator"> &bull; </span>
-          <a href="https://www.linkedin.com/in/taylor-g-9bb43896/" title="My LinkedIn" target="_blank" rel="noopener">LinkedIn</a>
-
-          <span class="navigation-separator"> &bull; </span>
-          <nuxt-link to="/contact">Contact</nuxt-link>
-        </div>
-      </footer>
+      <Footer></Footer>
     </div>
   </div>
 </template>
@@ -32,17 +15,18 @@
 <style>
 /* Base */
 
-@import url('https://fonts.googleapis.com/css?family=Cormorant+Infant:700');
+@import url('https://fonts.googleapis.com/css?family=Playfair+Display:400,700');
 @import url('https://fonts.googleapis.com/css?family=Lato');
 
 html {
   font-family: 'Lato', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
-  font-size: 22px;
+  font-size: 19px;
+  line-height: 26px;
+
   -moz-osx-font-smoothing: grayscale;
-  -webkit-font-smoothing: antialiased;
-  box-sizing: border-box;
-  background-color: #f3f5f6;
-  color: #35495e;
+
+  background-color: #FCFCFC;
+  color: #404040;
 }
 
 body {
@@ -67,85 +51,9 @@ body {
 }
 
 .main-content {
+  z-index: 1;
   flex-grow: 1;
   overflow-y: auto;
-}
-
-/* Navigation */
-
-a {
-  text-decoration: none;
-  color: #1565C0;
-}
-
-a:hover {
-  margin-bottom: -2px;
-  border-bottom: 2px solid;
-}
-
-.subtle-link {
-  color: inherit;
-  border-bottom: 1px solid;
-}
-
-.navigation-separator {
-  display: inline;
-  margin: 0 1em 0 1em;
-}
-
-.navigation-separator {
-  color: #afbdcb;
-}
-
-.section-dark .navigation-separator {
-  color: #5b748b;
-}
-
-@media screen and (max-width: 600px) {
-  .navigation-separator {
-    display: none;
-  }
-
-  .navigation {
-    display: flex;
-    justify-content: space-around;
-  }
-
-  .navigation > a {
-    margin: 0.25em;
-  }
-
-  .top-navigation {
-    padding-top: 0.75em;
-    padding-bottom: 1.5em;
-  }
-
-  .bottom-navigation {
-    flex-grow: 1;
-    justify-content: space-around;
-  }
-}
-
-.top-navigation {
-  text-align: center;
-  padding-top: 0.5em;
-  padding-bottom: 1em;
-}
-
-.top-navigation > a {
-  color: #CFD8DC;
-}
-
-.top-navigation > a:hover {
-  color: #FAFAFA;
-}
-
-.top-navigation > a.nuxt-link-exact-active {
-  color: #90CAF9;
-  font-weight: bold;
-  font-style: normal;
-  margin-bottom: -2px;
-  border-bottom: 2px solid;
 }
 
 /* Body Content */
@@ -158,54 +66,51 @@ a:hover {
 }
 
 h1, h2, h3, h4, h5, h6 {
-  font-family: "Cormorant Infant", "Georgia", serif;
-  font-weight: 700;
+  font-family: "Playfair Display", serif;
+  color: #132733;
 }
 
-h1 {
-  font-size: 72px;
-}
-
-h2 {
-  font-size: 36px;
+h2, h3, h4, h5, h6 {
+  font-weight: normal;
 }
 
 .title, .subtitle {
   text-align: center;
-  display: block;
-  -webkit-font-smoothing: antialiased;
 }
 
 .title {
-  font-size: 60px;
-  color: #35495e;
-  margin-bottom: 0.5em;
-  letter-spacing: -1px;
+  font-family: Playfair Display;
+  font-style: normal;
+  font-weight: bold;
+  line-height: normal;
+  font-size: 48px;
+  margin-top: 0.5em;
 }
 
-.section-dark {
-  background: #35495e;
-  color: #FFFFFF;
+.subtitle {
+  font-family: Playfair Display;
+  font-style: normal;
+  font-weight: normal;
+  line-height: normal;
+  font-size: 36px;
 }
 
-.section-dark .title {
-  color: #FFFFFF;
+/* Separation */
+section, hr.separator {
+  margin-bottom: 40px;
 }
 
-.section-dark .subtitle {
-  color: #CFD8DC;
+hr {
+  display: block;
+  box-sizing: content-box;
+  background: #E5E5E5;
+  height: 2px;
+  border: 0;
+  box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.05);
+  margin: 0 10vw 0 10vw;
 }
 
-.section-pad {
-  padding-top: 0.5em;
-  padding-bottom: 0.5em;
-}
-
-.section-pad-half {
-  padding-top: 2em;
-}
-
-/* Abbreviations */
+/* Abbreviation */
 
 abbr[title] {
   font-variant: normal;
@@ -231,62 +136,26 @@ abbr[title]:after
   }
 }
 
-@media screen and (max-width: 700px) {
-  .title {
-    font-size: 56px;
-  }
-
-  .subtitle {
-    font-size: 32px;
-  }
-}
-
-/* Footer */
-
-.end-footer {
-  padding: 1em 0 1em 0;
-  display: flex;
-  justify-content: center;
-  border-top: 1px solid #CFD8DC;
-}
-
-/* Interaction */
-
-.button--green {
-  display: inline-block;
-  border-radius: 4px;
-  border: 2px solid #3b8070;
-  color: #3b8070;
+/* a */
+a {
+  color: #3E3CBE;
   text-decoration: none;
-  padding: 10px 30px;
 }
 
-.button--green:hover {
-  color: #fff;
-  background-color: #3b8070;
-}
-
-.button--grey {
-  display: inline-block;
-  border-radius: 4px;
-  border: 2px solid #35495e;
-  color: #35495e;
-  text-decoration: none;
-  padding: 10px 30px;
-  margin-left: 15px;
-}
-
-.button--grey:hover {
-  color: #fff;
-  background-color: #35495e;
-}
-
-.icon, .icon > svg {
-    display: inline-block;
-    width: 1em;
-    height: 1em;
-    fill: currentColor;
-    vertical-align: -0.1em;
+a:hover {
+  text-decoration: underline;
 }
 
 </style>
+
+<script>
+import Navbar from '../components/Navbar';
+import Footer from '../components/Footer';
+
+export default {
+  components: {
+    Navbar,
+    Footer
+  }
+}
+</script>

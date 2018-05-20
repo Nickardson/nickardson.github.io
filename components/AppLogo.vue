@@ -8,7 +8,7 @@
   </div>
 </template>
 
-<style>
+<style scoped>
 .logo {
   margin-bottom: 2em;
 }

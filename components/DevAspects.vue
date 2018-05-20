@@ -1,8 +1,12 @@
 <template>
   <div class="columns-container">
     <div class="columns">
-      <div v-for="(aspect, index) of aspects" :key="aspect.name" class="dev-aspect">
-        <h3 class="dev-aspect-header"><span class="dev-aspect-number">#{{index + 1}}</span> {{aspect.name}}</h3>
+      <div
+        v-for="aspect of aspects"
+        :key="aspect.name"
+        :class="{ 'dev-key-aspect': aspect.key }"
+        class="dev-aspect">
+        <h3 class="dev-aspect-header">{{aspect.name}}</h3>
         <p
           v-html="aspect.description"
           class="dev-aspect-description"></p>
@@ -25,26 +29,53 @@
 }
 
 .dev-aspect {
+  background: #FFFFFF;
+  box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.1);
+  border-radius: 2px;
+
   align-content: center;
   flex-grow: 1;
-  padding: 1em;
-  max-width: 400px;
+  padding: 0.5em 1em 1.5em 1em;
+  max-width: 300px;
+
+  /* under */
+  margin: 0.25em -0.25em 0.25em -0.25em;
+  z-index: 49;
 }
 
-@media screen and (max-width: 1200px) {
+.dev-key-aspect {
+  background: linear-gradient(180deg, #3E3CBE 0%, #6F5BBF 100%);
+  box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.25), 0px 4px 6px rgba(0, 0, 0, 0.25);
+
+  /* over */
+  margin: 0;
+  z-index: 50;
+}
+
+.dev-key-aspect .dev-aspect-header {
+  color: #F2F2F2;
+}
+.dev-key-aspect .dev-aspect-description {
+  color: #E5E4FF;
+}
+
+@media screen and (max-width: 1000px) {
   .dev-aspect {
     flex-basis: 100%;
     max-width: inherit;
+
+    margin: 5px 20px 5px 20px;
+  }
+
+  .dev-key-aspect {
+    margin: 5px 10px 5px 10px;
   }
 }
 
-.dev-aspect-number {
-  opacity: 0.75;
-  margin-right: 0.2em;
-}
-
 .dev-aspect-header {
-  font-size: 32px;
+  font-family: "Playfair Display", serif;
+  font-size: 24px;
+  font-weight: normal;
   margin: 0.5em 0 0.5em 0;
 }
 
@@ -67,6 +98,7 @@ export default {
           `
         },
         {
+          key: true,
           name: "Development",
           description: "Strong technical acumen across a variety of software domains and languages, with a knack for quickly adapting to new technologies."
         },
