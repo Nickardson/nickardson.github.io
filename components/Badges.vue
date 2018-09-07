@@ -66,8 +66,10 @@ export default {
         'Java': { b: '#ea2d2f' },
         'SQLite': { b: '#8fd1f8', f: 'black' },
         'Angular 5': { b: '#c3002f' },
+        'Angular': { b: '#c3002f' },
         'TypeScript': { b: '#007acc' },
         'Firebase Realtime Database': { b: '#ffcb2c', f: 'black' },
+        'Firebase': { b: '#ffcb2c', f: 'black' },
         'Lua': { b: '#000080' },
         'Robotics': { b: '#FF6F00' },
       }

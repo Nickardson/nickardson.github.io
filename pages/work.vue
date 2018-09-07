@@ -145,6 +145,38 @@ export default {
     return {
       projects: [
         {
+          name: "CodeCraft Partner Community",
+
+          time: ['January 2018', 'April 2018'],
+
+          badges: [
+            {
+              name: "Angular"
+            },
+            {
+              name: "TypeScript"
+            },
+            {
+              name: "Firebase"
+            },
+            {
+              name: "Google Cloud Platform"
+            }
+          ],
+
+          description: `
+            <p>A team project for <a href="https://www.codecraftworks.com/" target="_blank" rel="noopener">CodeCraft Works</a>.</p>
+
+            <p>The site allows CodeCraft instructors to set up a profile, and allows CodeCraft partners to post when they are offering coding courses.</p>
+            
+            <p>Firebase Realtime Database means that any change to the site's data is near-instantaneously updated for all users.</p>
+          `,
+
+          image: "/assets/work/PartnerCommunity/Instructors.webp",
+          imageFallback: "/assets/work/PartnerCommunity/Instructors.png",
+        },
+
+        {
           name: "FRC (First Robotics Competition) Team 1557",
 
           time: ['2012', '2016'],
@@ -199,48 +231,6 @@ export default {
           imageFull: "/assets/work/FRC.jpg",
           image: "/assets/work/FRC-small.webp",
           imageFallback: "/assets/work/FRC-small.jpg",
-        },
-
-        {
-          name: "CodeCraft Partner Community",
-
-          time: ['January 2018', 'April 2018'],
-
-          badges: [
-            {
-              name: "Angular 5"
-            },
-            {
-              name: "TypeScript"
-            },
-            {
-              name: "Firebase Realtime Database"
-            },
-            {
-              name: "Google Cloud Platform"
-            }
-          ],
-
-          description: `
-            <p>A team project for <a href="https://www.codecraftworks.com/" target="_blank" rel="noopener">CodeCraft Works</a>.</p>
-
-            <p>The site allows CodeCraft instructors to set up a profile, and allows CodeCraft partners to post when they are offering coding courses.</p>
-            
-            <p>Firebase Realtime Database means that any change to the site's data is near-instantaneously updated for all users.</p>
-          `,
-
-          image: "/assets/work/PartnerCommunity/Instructors.webp",
-          imageFallback: "/assets/work/PartnerCommunity/Instructors.png",
-        },
-
-        {
-          name: "Numerous Assorted Projects",
-          time: ['2010', 'Now!'],
-          description: `<p>
-            This page is by no means complete or exhaustive.
-            I've worked on a wide variety of school, work, and personal projects across many software and hardware domains.
-            Feel free to browse my GitHub page to see other projects I've developed or contributed to.
-          </p>`
         },
 
         {
@@ -364,6 +354,16 @@ export default {
         },
 
         // TODO: Kinect FRC pit interactive display
+
+        {
+          name: "Numerous Assorted Projects",
+          time: ['2010', 'Now!'],
+          description: `<p>
+            This page is by no means complete or exhaustive.
+            I've worked on a wide variety of school, work, and personal projects across many software and hardware domains.
+            Feel free to browse my GitHub page to see some other public projects I've developed or contributed to.
+          </p>`
+        },
       ]
     };
   }
