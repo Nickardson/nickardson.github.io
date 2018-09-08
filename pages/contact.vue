@@ -7,8 +7,22 @@
     </section>
 
     <div class="container">
+      <section class="section-pad">
+        <h2>Email</h2>
+        <p>
+          <span>tay</span><!--Various methods of stupid simple, very safe ob-fus-cation, which may or may not work.--><span>lor</span><span color="#f3f5f6" style="color:#f3f5f6; display: none">pleaseenablecss</span><span>&#64;</span><span color="#f3f5f6" style="color:#f3f5f6; display: none">aol</span><span>tgrat</span><!--mailinator--><span>zer&#46;com</span>
+        </p>
+      </section>
+
+      <section class="section-pad">
+        <h2>LinkedIn</h2>
+        <p>
+          <a href="https://www.linkedin.com/in/taylor-gratzer">Taylor Gratzer</a>
+        </p>
+      </section>
+
       <section class="section-pad-half">
-        <h2>Message</h2>
+        <h2>Send a message</h2>
         <form v-if="!hasSentFromForm" ref="form" class="needs-validation" @submit="sendMail">
           <h3 v-if="formError" class="form-error">Error: {{formError}}</h3>
           <div class="form-group">
@@ -30,13 +44,6 @@
           Thanks, your message has been sent!
         </div>
       </section>
-
-      <section class="section-pad">
-        <h2>Email</h2>
-        <p>
-          <span>tay</span><!--Various methods of stupid simple, very safe ob-fus-cation, which may or may not work.--><span>lor</span><span color="#f3f5f6" style="color:#f3f5f6; display: none">pleaseenablecss</span><span>&#64;</span><span color="#f3f5f6" style="color:#f3f5f6; display: none">aol</span><span>tgrat</span><!--mailinator--><span>zer&#46;com</span>
-        </p>
-      </section>
     </div>
   </div>
 </template>
@@ -49,7 +56,9 @@ textarea {
   line-height: 1.5rem;
   border: 1px solid #ced4da;
   border-radius: 0.25rem;
-  margin-top: 0.5em;
+}
+
+h2 {
   margin-bottom: 0.5em;
 }
 
