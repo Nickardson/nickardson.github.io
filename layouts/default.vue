@@ -30,7 +30,7 @@ html {
 }
 
 body {
-  min-height: 100vh;
+  /* min-height: 100vh; */
   overflow-y: scroll;
 }
 
@@ -40,7 +40,7 @@ body {
 }
 
 .main-body {
-  min-height: 100vh;
+  /* min-height: 100vh; */
   display: flex;
   flex-direction: column;
 }
@@ -108,6 +108,27 @@ hr {
   border: 0;
   box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.05);
   margin: 0 10vw 0 10vw;
+}
+
+@media screen and (max-width: 1000px) {
+  /* body { */
+  .footer {
+    margin-bottom: 50px;
+  }
+  .navigation-container {
+    z-index: 999;
+    position: fixed;
+    right: 0;
+    left: 0;
+    border-radius: 0;
+    bottom: 0;
+  }
+
+  .navigation {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+  }
 }
 
 /* Abbreviation */

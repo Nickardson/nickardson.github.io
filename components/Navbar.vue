@@ -63,10 +63,10 @@
     display: none;
   }
 
-  .navigation-flair-container {
+  /* .navigation-flair-container {
     height: 4px;
     background: linear-gradient(90deg, #EB5757 0%, #F2994A 100%);
-  }
+  } */
 
   .navigation-flair {
     display: none;
