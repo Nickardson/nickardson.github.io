@@ -30,18 +30,15 @@
               :badges="project.badges"
               class="project-badges"></Badges>
 
-            <a
-              v-if="project.image"
-              :href="project.imageFull || project.imageFallback || project.image"
-              target="_blank"
-              rel="noopener">
+            <div
+              v-if="project.image">
               <picture v-if="project.imageFallback">
                 <source :srcset="encodeURI(project.image)" type="image/webp">
                 <img :src="project.imageFallback" :alt="project.name + ' Project Image'" class="project-image">
               </picture>
 
               <img v-if="!project.imageFallback" :src="project.image" :alt="project.name + ' Project Image'" class="project-image">
-            </a>
+            </div>
 
             <div
               v-if="project.description"
@@ -165,11 +162,13 @@ export default {
           ],
 
           description: `
-            <p>A team project for <a href="https://www.codecraftworks.com/" target="_blank" rel="noopener">CodeCraft Works</a>.</p>
+            <p>My UCF capstone project, for the company <a href="https://www.codecraftworks.com/" target="_blank" rel="noopener">CodeCraft Works</a>.</p>
 
-            <p>The site allows CodeCraft instructors to set up a profile, and allows CodeCraft partners to post when they are offering coding courses.</p>
+            <p>The site allows CodeCraft instructors to set up a profile, and allows CodeCraft's partners to post when and where they will offer their coding courses.</p>
             
-            <p>Firebase Realtime Database means that any change to the site's data is near-instantaneously updated for all users.</p>
+            <p>Using Angular and the Firebase Realtime Database, the site will broadcast relevant database updates. User changes are immediately visible to any other users viewing it.</p>
+
+            <p>The site makes use of responsive mobile breakpoints for a great viewing experience on desktop or mobile, and is an single-page application which provides a snappy browsing experience.</p>
           `,
 
           image: "/assets/work/PartnerCommunity/Instructors.webp",
@@ -312,7 +311,7 @@ export default {
               name: "Web Development"
             },
             {
-              name: "Domain-Specific Language"
+              name: "Emulator"
             },
             {
               name: "Lua"
@@ -346,8 +345,8 @@ export default {
             <p>A cellular automata simulation designed to mesmerize. This was on display at the '14 FRC competition, in Team 1557's (12 Volt Bolt) pit area.</p>
             <p>The dots are rendered on an HTML canvas, and each game team represents an FRC team present at the competition.
             The dots will apply strategies to eliminate weak teams, save themselves, and cluster together.</p>
-            <p><a href="http://tgratzer.com/team1557-dots/" target="_blank" rel="noopener">See this project online</a></p>
           `,
+            //<p><a href="http://tgratzer.com/team1557-dots/" target="_blank" rel="noopener">See this project online</a></p>
 
           image: "/assets/work/Dots.webp",
           imageFallback: "/assets/work/Dots.PNG",
