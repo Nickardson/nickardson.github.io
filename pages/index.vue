@@ -11,7 +11,13 @@
     </section>
 
     <section id="brief-intro">
-      <DevAspects></DevAspects>
+      <DevAspects v-on:aspect="aspectChanged"></DevAspects>
+    </section>
+
+    <hr style="margin-bottom: 2em">
+
+    <section id="about">
+      <AspectDetails v-bind:aspect="selectedAspect"></AspectDetails>
     </section>
 
     <!-- TODO: give attribution or get rid of the icons -->
@@ -29,15 +35,26 @@
 </style>
 
 <script>
-// import AppLogo from "~/components/AppLogo.vue";
 import Icons8Attribution from "~/components/Icons8Attribution.vue";
 import DevAspects from "~/components/DevAspects.vue";
+import AspectDetails from "~/components/AspectDetails.vue";
 
 export default {
   components: {
-    // AppLogo,
     Icons8Attribution,
-    DevAspects
+    DevAspects,
+    AspectDetails
+  },
+  data: () => {
+    return {
+      selectedAspect: 'development'
+    };
+  },
+  methods: {
+    aspectChanged: function (aspectId) {
+      // TODO: enable when the other areas are set
+      // this.selectedAspect = aspectId;
+    }
   }
 };
 </script>

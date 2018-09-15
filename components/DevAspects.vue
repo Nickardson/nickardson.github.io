@@ -4,6 +4,7 @@
       <div
         v-for="aspect of aspects"
         :key="aspect.name"
+        @click="onAspectChanged(aspect.id)"
         :class="{ 'dev-key-aspect': aspect.key }"
         class="dev-aspect">
         <h3 class="dev-aspect-header">{{aspect.name}}</h3>
@@ -91,6 +92,7 @@ export default {
     return {
       aspects: [
         {
+          id: 'design',
           name: "Design",
           description: `
             Familiar with <abbr title="User Interface">UI</abbr> / <abbr title="User Experience">UX</abbr> practices,
@@ -98,16 +100,23 @@ export default {
           `
         },
         {
+          id: 'development',
           key: true,
           name: "Development",
           description: "Strong technical acumen across a variety of software domains and languages, with a knack for quickly adapting to new technologies."
         },
         {
+          id: 'devops',
           name: "Dev-ops",
           description: "Experienced in Continuous Integration and Deployment (CI/CD), automated gated releases to Azure, and application metric monitoring."
         }
       ]
     };
+  },
+  methods: {
+    onAspectChanged: function (aspectId) {
+      this.$emit('aspect', aspectId);
+    }
   }
 };
 </script>
