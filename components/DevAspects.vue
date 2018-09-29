@@ -40,13 +40,16 @@
   max-width: 300px;
 
   /* under */
-  margin: 0.25em -0.25em 0.25em -0.25em;
+  /* margin: 0.25em -0.25em 0.25em -0.25em; */
+  margin: 0.5em;
   z-index: 49;
+
+  cursor: pointer;
 }
 
 .dev-key-aspect {
   background: linear-gradient(180deg, #3E3CBE 0%, #6F5BBF 100%);
-  box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.25), 0px 4px 6px rgba(0, 0, 0, 0.25);
+  box-shadow: 0px 3px 8px rgba(0, 0, 0, .25), 0px 5px 8px rgba(0, 0, 0, .25);
 
   /* over */
   margin: 0;
@@ -93,6 +96,7 @@ export default {
       aspects: [
         {
           id: 'design',
+          key: false,
           name: "Design",
           description: `
             Familiar with <abbr title="User Interface">UI</abbr> / <abbr title="User Experience">UX</abbr> practices,
@@ -107,6 +111,7 @@ export default {
         },
         {
           id: 'devops',
+          key: false,
           name: "Dev-ops",
           description: "Experienced in Continuous Integration and Deployment (CI/CD), automated gated releases to Azure, and application metric monitoring."
         }
@@ -116,6 +121,9 @@ export default {
   methods: {
     onAspectChanged: function (aspectId) {
       this.$emit('aspect', aspectId);
+      this.aspects.forEach((aspect) => {
+        aspect.key = (aspect.id === aspectId);
+      });
     }
   }
 };

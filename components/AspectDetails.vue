@@ -1,8 +1,8 @@
 <template>
   <div class="aspect-details">
     <AboutDevelopment v-if="shouldShowAspect('development')"></AboutDevelopment>
-    <!-- <AboutDesign v-if="shouldShowAspect('design')"></AboutDesign>
-    <AboutDevops v-if="shouldShowAspect('devops')"></AboutDevops> -->
+    <AboutDesign v-if="shouldShowAspect('design')"></AboutDesign>
+    <AboutDevops v-if="shouldShowAspect('devops')"></AboutDevops>
   </div>
 </template>
 
@@ -19,6 +19,10 @@
   flex-wrap: wrap;
 }
 
+.full-n-full > * {
+  padding: 1em;
+}
+
 .half-n-half > * {
   margin: 1em;
   flex-grow: 1;
@@ -32,7 +36,7 @@
 }
 
 @media screen and (min-width: 1201px) {
-  .half-n-half {
+  .half-n-half, .full-n-full {
     max-width: 1200px;
     margin: 0 auto;
   }

@@ -52,8 +52,7 @@ export default {
   },
   methods: {
     aspectChanged: function (aspectId) {
-      // TODO: enable when the other areas are set
-      // this.selectedAspect = aspectId;
+      this.selectedAspect = aspectId;
     }
   }
 };
