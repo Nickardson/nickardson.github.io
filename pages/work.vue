@@ -2,11 +2,19 @@
   <div>
     <section>
       <h1 class="title">
-        Work Examples
+        My Work
       </h1>
     </section>
 
-    <section>
+    <!-- <section>
+      <h2 class="subtitle">Experience</h2>
+
+    </section> -->
+
+<!-- class="print-page-before" -->
+    <section >
+      <!-- <hr class="separator"> -->
+
       <h2 class="subtitle">
         Demos, Case Studies, Technologies
       </h2>
@@ -92,7 +100,7 @@
 
 .project-description p {
   margin: 0.75em 0 0.75em 0;
-  line-height: 1.4em;
+  line-height: 1.55em;
 }
 
 .project-case-study-link {
@@ -142,6 +150,36 @@ export default {
     return {
       projects: [
         {
+          name: "My Daily Board",
+
+          time: ['August 2018', 'October 2018'],
+
+          badges: [
+            {
+              name: "Vue.js"
+            },
+            {
+              name: "Azure Devops"
+            },
+            {
+              name: "Scrum"
+            }
+          ],
+
+          description: `
+            <p><a href="https://dailyboard.azurewebsites.net/" target="_blank" rel="noopener">My Daily Board</a> helps my Scrum team (and yours too!) to run our daily standup.</p>
+
+            <p>Authorize the app to view your Azure Devops (VSTS) tasks and teams. Then each day, the daily standup organizer brings up the page to provide a visual of what tasks were completed since the last standup, and what's in progress.</p>
+            
+            <p>Uses ASP.NET core, Vue.js and Material design for a crisp-looking, light-weight utility for users from any organization.</p>
+
+            <p><a href="https://dailyboard.azurewebsites.net/" target="_blank" rel="noopener">See this project online</a></p>
+          `,
+
+          image: "/assets/work/DailyBoard.png"
+        },
+
+        {
           name: "CodeCraft Partner Community",
 
           time: ['January 2018', 'April 2018'],
@@ -150,9 +188,9 @@ export default {
             {
               name: "Angular"
             },
-            {
-              name: "TypeScript"
-            },
+            // {
+            //   name: "TypeScript"
+            // },
             {
               name: "Firebase"
             },

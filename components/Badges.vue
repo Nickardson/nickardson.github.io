@@ -72,6 +72,8 @@ export default {
         'Firebase': { b: '#ffcb2c', f: 'black' },
         'Lua': { b: '#000080' },
         'Robotics': { b: '#FF6F00' },
+        'Vue.js': { b: '#4dba87' },
+        'Azure Devops': { b: '#007bcd' },
       }
     };
   },

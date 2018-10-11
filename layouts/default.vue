@@ -167,6 +167,18 @@ a:hover {
   text-decoration: underline;
 }
 
+/* print */
+@media print {
+  hr.separator {
+    display: none;
+  }
+
+  .print-page-before {
+    float: none;
+    display: block;
+    break-before: page;
+  }
+}
 </style>
 
 <script>
