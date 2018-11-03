@@ -20,7 +20,7 @@
 
 html {
   font-family: 'Lato', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
-  font-size: 19px;
+  font-size: 16px;
   line-height: 26px;
 
   -moz-osx-font-smoothing: grayscale;
@@ -111,9 +111,8 @@ hr {
 }
 
 @media screen and (max-width: 1000px) {
-  /* body { */
-  .footer {
-    margin-bottom: 50px;
+  body {
+    margin-top: 50px;
   }
   .navigation-container {
     z-index: 999;
@@ -121,7 +120,7 @@ hr {
     right: 0;
     left: 0;
     border-radius: 0;
-    bottom: 0;
+    top: 0;
   }
 
   .navigation {
