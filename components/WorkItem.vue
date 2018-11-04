@@ -13,8 +13,17 @@
       <div
         class="image"
         v-if="!hideimage && project.image"
+        v-show="ssr"
         :style="{'background-image': 'url(' + encodeURIComponent(project.image) + ')'}"
       ></div>
+      <v-img
+        v-if="!hideimage && project.image"
+        v-show="!ssr"
+        :src="project.image"
+        max-height="600"
+        contain
+      ></v-img>
+
       <Badges
         v-if="project.badges"
         :badges="project.badges"
@@ -29,6 +38,7 @@
 
 <style scoped>
 .image {
+  min-height: 25vh;
   height: 500px;
   max-height: 800px;
   width: 100%;
@@ -55,6 +65,7 @@ export default {
   },
   data: () => {
     return {
+      ssr: process.server
     };
   },
   props: [
