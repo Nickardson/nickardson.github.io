@@ -1,19 +1,30 @@
-// const nodeExternals = require('webpack-node-externals')
-// const VuetifyLoaderPlugin = require('vuetify-loader/lib/plugin')
+const nodeExternals = require('webpack-node-externals')
+const VuetifyLoaderPlugin = require('vuetify-loader/lib/plugin')
 
 module.exports = {
   /*
-  ** Headers of the page
-  */
+   ** Headers of the page
+   */
   head: {
     title: 'Taylor Gratzer | Central Florida',
-    meta: [
-      { charset: 'utf-8' },
-      { name: 'viewport', content: 'width=device-width, initial-scale=1' },
-      { hid: 'description', name: 'description', content: 'Nuxt.js project' }
+    meta: [{
+        charset: 'utf-8'
+      },
+      {
+        name: 'viewport',
+        content: 'width=device-width, initial-scale=1'
+      },
+      {
+        hid: 'description',
+        name: 'description',
+        content: 'Nuxt.js project'
+      }
     ],
-    link: [
-      { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
+    link: [{
+        rel: 'icon',
+        type: 'image/x-icon',
+        href: '/favicon.ico'
+      },
       {
         rel: 'stylesheet',
         type: 'text/css',
@@ -25,17 +36,29 @@ module.exports = {
     },
   },
   /*
-  ** Customize the progress bar color
-  */
-  loading: { color: '#B3E5FC' },
+   ** Customize the progress bar color
+   */
+  loading: {
+    color: '#B3E5FC'
+  },
   /*
-  ** Build configuration
-  */
+   ** Build configuration
+   */
   build: {
+    transpile: [/^vuetify/],
+    plugins: [
+      new VuetifyLoaderPlugin()
+    ],
+
+    extractCSS: true,
+
     /*
-    ** Run ESLint on save
-    */
-    extend (config, { isDev, isClient }) {
+     ** Run ESLint on save
+     */
+    extend(config, {
+      isDev,
+      isClient
+    }) {
       if (isDev && isClient) {
         config.module.rules.push({
           enforce: 'pre',
@@ -44,32 +67,24 @@ module.exports = {
           exclude: /(node_modules)/
         })
       }
-      // if (process.server) {
-      //   config.externals = [
-      //     nodeExternals({
-      //       whitelist: [/^vuetify/]
-      //     })
-      //   ]
-      // }
+      if (process.server) {
+        config.externals = [
+          nodeExternals({
+            whitelist: [/^vuetify/]
+          })
+        ]
+      }
     },
 
-    // transpile: [/^vuetify/],
-    // plugins: [
-    //   new VuetifyLoaderPlugin()
-    // ],
   },
 
   generate: {
     fallback: true
   },
 
-  build: {
-    extractCSS: true
-  },
-
   plugins: ['~/plugins/vuetify'],
   /*
-  ** Load Vuetify CSS globally
-  */
-  css: ['~/assets/app.styl']
+   ** Load Vuetify CSS globally
+   */
+  css: ['~assets/app.styl']
 }

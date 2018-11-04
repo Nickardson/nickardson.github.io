@@ -1,7 +1,7 @@
 <template>
   <div class="navigation-container">
     <v-toolbar dark height="64">
-      <!-- <v-toolbar-side-icon @click.native.stop="drawer = !drawer" /> -->
+      <v-toolbar-side-icon @click.native.stop="drawer = !drawer" />
       <v-toolbar-title>Taylor Gratzer</v-toolbar-title>
       
       <v-spacer></v-spacer>
