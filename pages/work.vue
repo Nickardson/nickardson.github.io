@@ -16,56 +16,56 @@
       <!-- <hr class="separator"> -->
 
       <h2 class="subtitle">
-        Demos, Case Studies, Technologies
+        Demos, Projects, Technologies
       </h2>
     </section>
 
     <section>
-      <hr class="separator">
-
-      <div class="project-list-container">
-        <div class="project-list">
-          <div
+      <v-container>
+        <div v-show="isSmallScreen">
+          <WorkItem
             v-for="project of projects"
             :key="project.name"
-            class="project">
-            <h2>{{project.name}}</h2>
-
-            <h3 v-if="project.time" class="project-date">{{project.time | dateFormat}}</h3>
-
-            <Badges
-              v-if="project.badges"
-              :badges="project.badges"
-              class="project-badges"></Badges>
-
-            <div
-              v-if="project.image">
-              <picture v-if="project.imageFallback">
-                <source :srcset="encodeURI(project.image)" type="image/webp">
-                <img :src="project.imageFallback" :alt="project.name + ' Project Image'" class="project-image">
-              </picture>
-
-              <img v-if="!project.imageFallback" :src="project.image" :alt="project.name + ' Project Image'" class="project-image">
-            </div>
-
-            <div
-              v-if="project.description"
-              v-html="project.description"
-              class="project-description"></div>
-
-            <div
-              v-if="project.caseStudy"
-              class="project-case-study-link">
-              <nuxt-link :to="project.caseStudy">View Case Study</nuxt-link>
-            </div>
-          </div>
+            :project="project"
+            class="mb-3"
+          ></WorkItem>
         </div>
-      </div>
+
+        <v-timeline
+          align-top
+          v-show="!isSmallScreen"
+        >
+          <v-timeline-item
+            v-for="project of projects"
+            :key="project.name"
+            class="mb-3"
+            color="grey"
+            icon-color="grey lighten-2"
+            small
+          >
+            <!-- for large screens, opposite the card -->
+            <v-img
+              slot="opposite"
+              v-if="project.image"
+              :src="project.image"
+              max-height="600"
+              contain
+              class="ma-4"
+            ></v-img>
+
+            <WorkItem :project="project" :hideimage="true"></WorkItem>
+          </v-timeline-item>
+        </v-timeline>
+      </v-container>
     </section>
   </div>
 </template>
 
 <style lang="css">
+.v-timeline-item .caption {
+  margin-top: .75em;
+}
+
 .project-list-container {
   display: flex;
   justify-content: center;
@@ -130,20 +130,27 @@
 </style>
 
 <script>
+import WorkItem from "~/components/WorkItem.vue";
 import Badges from "~/components/Badges.vue";
 
 export default {
   components: {
+    WorkItem,
     Badges
   },
-  filters: {
-    dateFormat: function(value) {
-      if (!value) {
-        return "";
+  computed: {
+    isSmallScreen () {
+      if (process.server) {
+        return true;
       }
 
-      return value
-        .join(" - ");
+      switch (this.$vuetify.breakpoint.name) {
+        case 'xs':
+        case 'sm': return true;
+        case 'md':
+        case 'lg':
+        case 'xl': return false;
+      }
     }
   },
   data: () => {
@@ -152,7 +159,7 @@ export default {
         {
           name: "My Daily Board",
 
-          time: ['August 2018', 'October 2018'],
+          time: ["August 2018", "October 2018"],
 
           badges: [
             {
@@ -182,7 +189,7 @@ export default {
         {
           name: "CodeCraft Partner Community",
 
-          time: ['January 2018', 'April 2018'],
+          time: ["January 2018", "April 2018"],
 
           badges: [
             {
@@ -210,13 +217,13 @@ export default {
           `,
 
           image: "/assets/work/PartnerCommunity/Instructors.webp",
-          imageFallback: "/assets/work/PartnerCommunity/Instructors.png",
+          imageFallback: "/assets/work/PartnerCommunity/Instructors.png"
         },
 
         {
           name: "FRC (First Robotics Competition) Team 1557",
 
-          time: ['2012', '2016'],
+          time: ["2012", "2016"],
 
           badges: [
             {
@@ -239,7 +246,7 @@ export default {
             // },
             {
               name: "Java"
-            },
+            }
             // {
             //   name: "LabVIEW"
             // },
@@ -267,18 +274,18 @@ export default {
 
           imageFull: "/assets/work/FRC.jpg",
           image: "/assets/work/FRC-small.webp",
-          imageFallback: "/assets/work/FRC-small.jpg",
+          imageFallback: "/assets/work/FRC-small.jpg"
         },
 
         {
           name: "SHENZHEN I/O Solitaire",
 
-          time: ['November 2016', 'April 2017'],
+          time: ["November 2016", "April 2017"],
 
           badges: [
             {
               name: "Web Development"
-            },
+            }
           ],
 
           description: `
@@ -288,7 +295,7 @@ export default {
           `,
 
           image: "/assets/work/ShenzhenSolitaire.webp",
-          imageFallback: "/assets/work/ShenzhenSolitaire.jpg",
+          imageFallback: "/assets/work/ShenzhenSolitaire.jpg"
         },
 
         // {
@@ -342,7 +349,7 @@ export default {
         {
           name: "TIS-100 Emulator",
 
-          time: ['September 2015', 'December 2015'],
+          time: ["September 2015", "December 2015"],
 
           badges: [
             {
@@ -365,18 +372,18 @@ export default {
           `,
 
           image: "/assets/work/TIS100 Emulator.webp",
-          imageFallback: "/assets/work/TIS100 Emulator.PNG",
+          imageFallback: "/assets/work/TIS100 Emulator.PNG"
         },
 
         {
           name: "'Dots' Team Pit Display",
 
-          time: ['January 2014'],
+          time: ["January 2014"],
 
           badges: [
             {
               name: "Web Development"
-            },
+            }
           ],
 
           description: `
@@ -384,23 +391,23 @@ export default {
             <p>The dots are rendered on an HTML canvas, and each game team represents an FRC team present at the competition.
             The dots will apply strategies to eliminate weak teams, save themselves, and cluster together.</p>
           `,
-            //<p><a href="http://tgratzer.com/team1557-dots/" target="_blank" rel="noopener">See this project online</a></p>
+          //<p><a href="http://tgratzer.com/team1557-dots/" target="_blank" rel="noopener">See this project online</a></p>
 
           image: "/assets/work/Dots.webp",
-          imageFallback: "/assets/work/Dots.PNG",
+          imageFallback: "/assets/work/Dots.PNG"
         },
 
         // TODO: Kinect FRC pit interactive display
 
         {
           name: "Numerous Assorted Projects",
-          time: ['2010', 'Now!'],
+          time: ["2010", "Now!"],
           description: `<p>
             This page is by no means complete or exhaustive.
             I've worked on a wide variety of school, work, and personal projects across many software and hardware domains.
             Feel free to browse my GitHub page to see some other public projects I've developed or contributed to.
           </p>`
-        },
+        }
       ]
     };
   }

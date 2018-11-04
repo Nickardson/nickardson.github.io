@@ -6,7 +6,7 @@
       </h1>
     </section>
 
-    <div class="container">
+    <div class="body-container">
       <section class="section-pad-half">
         <h2>Technologies</h2>
         <p>

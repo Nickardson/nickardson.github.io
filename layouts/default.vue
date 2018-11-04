@@ -61,7 +61,7 @@ body {
 
 /* Body Content */
 
-.container {
+.body-container {
   max-width: 800px;
   margin-left: auto;
   margin-right: auto;

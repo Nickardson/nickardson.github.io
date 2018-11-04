@@ -6,7 +6,7 @@
       </h1>
     </section>
 
-    <div class="container">
+    <div class="body-container">
       <section class="section-pad">
         <h2>Email</h2>
         <p>
