@@ -36,7 +36,7 @@
           v-show="!isSmallScreen"
         >
           <v-timeline-item
-            v-for="project of projects"
+            v-for="(project, i) of projects"
             :key="project.name"
             class="mb-3"
             color="grey"
@@ -51,6 +51,7 @@
               max-height="600"
               contain
               class="ma-4"
+              :position="(i % 2 === 0 ? 'left' : 'right') + ' center'"
             ></v-img>
 
             <WorkItem :project="project" :hideimage="true"></WorkItem>

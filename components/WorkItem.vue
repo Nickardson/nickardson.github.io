@@ -70,7 +70,9 @@ export default {
   },
   props: [
     'project',
-    'hideimage'
+    'hideimage',
+    'left',
+    'right'
   ]
 };
 </script>
