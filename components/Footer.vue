@@ -52,7 +52,7 @@
 .links {
   display: flex;
   justify-content: center;
-  margin: 40px;
+  margin: 30px;
 }
 
 .icon {

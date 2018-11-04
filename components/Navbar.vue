@@ -1,18 +1,31 @@
 <template>
   <div class="navigation-container">
-    <nav class="navigation">
-      <nuxt-link to="/" class="logo-link">Taylor Gratzer</nuxt-link>
-      <nuxt-link to="/" class="nav-link">Intro</nuxt-link>
-      <nuxt-link to="/work" class="nav-link">Work</nuxt-link>
-      <nuxt-link to="/contact" class="nav-link">Contact</nuxt-link>
-    </nav>
+    <v-toolbar dark height="64">
+      <!-- <v-toolbar-side-icon @click.native.stop="drawer = !drawer" /> -->
+      <v-toolbar-title>Taylor Gratzer</v-toolbar-title>
+      
+      <v-spacer></v-spacer>
+      <v-toolbar-items class="hidden-sm-and-down">
+        <v-btn :to="item.link" v-for="item in mainItems" :key="item.title" flat>{{ item.title }}</v-btn>
+      </v-toolbar-items>
+    </v-toolbar>
+    <v-navigation-drawer v-model="drawer" left temporary fixed app>
+      <v-list>
+        <v-list-tile v-for="item in items"
+            :key="item.title"
+            @click=";"
+            :to="item.link"
+            nuxt>
+          <v-list-tile-action>
+            <v-icon>{{ item.icon }}</v-icon>
+          </v-list-tile-action>
 
-    <div class="navigation-flair-container">
-      <svg class="navigation-flair" width="183" height="73" viewBox="0 0 183 73" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <path d="M26.5 73L0 0H149L158 25L26.5 73Z" transform="translate(0.5)" fill="#EB5757"/>
-        <path d="M17 47.5L0 0H148L17 47.5Z" transform="translate(35)" fill="#F2994A"/>
-      </svg>
-    </div>
+          <v-list-tile-content>
+            <v-list-tile-title>{{ item.title }}</v-list-tile-title>
+          </v-list-tile-content>
+        </v-list-tile>
+      </v-list>
+    </v-navigation-drawer>
   </div>
 </template>
 
@@ -41,7 +54,7 @@
 }
 
 .navigation > a {
-  color: #FFFFFF;
+  color: #ffffff;
 
   display: inline-block;
   height: 100%;
@@ -74,20 +87,60 @@
 }
 
 a.nav-link {
-  margin: 0 .4em 0 .4em;
+  margin: 0 0.4em 0 0.4em;
   padding: 0 5px 0 5px;
   /* keep the bottom border size constantly the same */
   border-top: 3px solid transparent;
 }
 
 a.nav-link:hover {
-  color: #FAFAFA;
+  color: #fafafa;
 }
 
 a.nav-link.nuxt-link-exact-active {
   font-weight: bold;
   font-style: normal;
-  border-top: 3px solid #A4A2F0;
+  border-top: 3px solid #a4a2f0;
 }
-
 </style>
+
+<script>
+export default {
+  data() {
+    return {
+      mainItems: [
+        {
+          title: "Intro",
+          link: "/"
+        },
+        {
+          title: "Work",
+          link: "/work"
+        },
+        {
+          title: "Contact",
+          link: "/contact"
+        }
+      ],
+      items: [
+        {
+          title: "Intro",
+          link: "/",
+          icon: "home"
+        },
+        {
+          title: "Work",
+          link: "/work",
+          icon: "work"
+        },
+        {
+          title: "Contact",
+          link: "/contact",
+          icon: "question_answer"
+        }
+      ],
+      drawer: false
+    };
+  }
+};
+</script>

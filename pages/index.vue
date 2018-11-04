@@ -1,11 +1,5 @@
 <template>
   <div>
-    <section id="home">
-      <h1 class="title">
-        Taylor Gratzer
-      </h1>
-    </section>
-
     <section>
       <h2 class="subtitle">Full-stack Developer &amp; <span class="break-lg">FIRST Robotics Alumni</span></h2>
     </section>

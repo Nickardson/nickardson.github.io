@@ -1,7 +1,7 @@
 <template>
   <div>
     <section>
-      <h1 class="title">
+      <h1 class="header-title">
         My Work
       </h1>
     </section>

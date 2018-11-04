@@ -1,3 +1,6 @@
+// const nodeExternals = require('webpack-node-externals')
+// const VuetifyLoaderPlugin = require('vuetify-loader/lib/plugin')
+
 module.exports = {
   /*
   ** Headers of the page
@@ -10,7 +13,12 @@ module.exports = {
       { hid: 'description', name: 'description', content: 'Nuxt.js project' }
     ],
     link: [
-      { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }
+      { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
+      {
+        rel: 'stylesheet',
+        type: 'text/css',
+        href: 'https://fonts.googleapis.com/css?family=Material+Icons'
+      }
     ],
     htmlAttrs: {
       lang: 'en-US',
@@ -36,10 +44,32 @@ module.exports = {
           exclude: /(node_modules)/
         })
       }
-    }
+      // if (process.server) {
+      //   config.externals = [
+      //     nodeExternals({
+      //       whitelist: [/^vuetify/]
+      //     })
+      //   ]
+      // }
+    },
+
+    // transpile: [/^vuetify/],
+    // plugins: [
+    //   new VuetifyLoaderPlugin()
+    // ],
   },
 
   generate: {
     fallback: true
-  }
+  },
+
+  build: {
+    extractCSS: true
+  },
+
+  plugins: ['~/plugins/vuetify'],
+  /*
+  ** Load Vuetify CSS globally
+  */
+  css: ['~/assets/app.styl']
 }

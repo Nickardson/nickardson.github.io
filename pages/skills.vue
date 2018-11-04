@@ -1,7 +1,7 @@
 <template>
   <div>
     <section class="section-dark section-pad">
-      <h1 class="title">
+      <h1 class="header-title">
         Skills
       </h1>
     </section>

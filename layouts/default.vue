@@ -1,37 +1,39 @@
 <template>
-  <div class="flex-container-wrapper">
-    <div class="main-body">
-      <Navbar></Navbar>
+  <v-app class="main-body">
+    <Navbar></Navbar>
+    <main class="main-content">
+      <v-content>
+        <v-container fluid>
+          <nuxt />
+        </v-container>
+      </v-content>
+    </main>
 
-      <main class="main-content">
-        <nuxt/>
-      </main>
-
-      <Footer></Footer>
-    </div>
-  </div>
+    <Footer></Footer>
+  </v-app>
 </template>
 
 <style>
 /* Base */
 
-@import url('https://fonts.googleapis.com/css?family=Playfair+Display:400,700');
-@import url('https://fonts.googleapis.com/css?family=Lato');
+@import url("https://fonts.googleapis.com/css?family=Playfair+Display:400,700");
+@import url("https://fonts.googleapis.com/css?family=Lato");
 
 html {
-  font-family: 'Lato', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  font-family: "Lato", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    "Helvetica Neue", Arial, sans-serif;
   font-size: 16px;
   line-height: 26px;
 
   -moz-osx-font-smoothing: grayscale;
 
-  background-color: #FCFCFC;
+  background-color: #fcfcfc;
   color: #404040;
 }
 
 body {
   /* min-height: 100vh; */
-  overflow-y: scroll;
+  /* overflow-y: scroll; */
 }
 
 .flex-container-wrapper {
@@ -45,7 +47,9 @@ body {
   flex-direction: column;
 }
 
-*, *:before, *:after {
+*,
+*:before,
+*:after {
   box-sizing: border-box;
   margin: 0;
 }
@@ -65,20 +69,30 @@ body {
   padding: 1em;
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   font-family: "Playfair Display", serif;
   color: #132733;
 }
 
-h2, h3, h4, h5, h6 {
+h2,
+h3,
+h4,
+h5,
+h6 {
   font-weight: normal;
 }
 
-.title, .subtitle {
+.header-title,
+.subtitle {
   text-align: center;
 }
 
-.title {
+.header-title {
   font-family: Playfair Display;
   font-style: normal;
   font-weight: bold;
@@ -96,14 +110,15 @@ h2, h3, h4, h5, h6 {
 }
 
 /* Separation */
-section, hr.separator {
+section,
+hr.separator {
   margin-bottom: 40px;
 }
 
 hr {
   display: block;
   box-sizing: content-box;
-  background: #E5E5E5;
+  background: #e5e5e5;
   height: 2px;
   border: 0;
   box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.05);
@@ -138,32 +153,36 @@ abbr[title] {
   text-decoration: none;
 }
 
-abbr[title]:after
-{
+abbr[title]:after {
   content: " (" attr(title) ")";
   text-decoration: none;
 }
 
-@media screen and (min-width: 1025px)
-{
+@media screen and (min-width: 1025px) {
   abbr[title] {
     border-bottom: 1px dotted gray;
   }
 
-  abbr[title]:after
-  {
+  abbr[title]:after {
     content: "";
   }
 }
 
 /* a */
 a {
-  color: #3E3CBE;
+  color: #3e3cbe;
   text-decoration: none;
 }
 
 a:hover {
   text-decoration: underline;
+}
+
+aside a {
+  color: inherit;
+}
+aside a:hover {
+  text-decoration: none;
 }
 
 /* print */
@@ -181,13 +200,13 @@ a:hover {
 </style>
 
 <script>
-import Navbar from '../components/Navbar';
-import Footer from '../components/Footer';
+import Navbar from "../components/Navbar";
+import Footer from "../components/Footer";
 
 export default {
   components: {
     Navbar,
     Footer
   }
-}
+};
 </script>
