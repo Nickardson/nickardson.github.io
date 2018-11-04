@@ -1,5 +1,5 @@
-const nodeExternals = require('webpack-node-externals')
-const VuetifyLoaderPlugin = require('vuetify-loader/lib/plugin')
+import nodeExternals from 'webpack-node-externals'
+import VuetifyLoaderPlugin from 'vuetify-loader/lib/plugin';
 
 module.exports = {
   /*

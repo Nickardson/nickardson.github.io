@@ -5,26 +5,9 @@ import colors from 'vuetify/es5/util/colors'
 // https://github.com/vuetifyjs/nuxt/blob/master/template/plugins/vuetify.js
 // https://github.com/vuetifyjs/a-la-carte/blob/master/template/src/main.js
 
-import Vuetify, {
-  VApp, // required
-  // VNavigationDrawer,
-  // VFooter,
-  // VToolbar,
-  // transitions
-} from 'vuetify/lib'
-import { Ripple } from 'vuetify/lib/directives'
+import Vuetify from 'vuetify/lib'
 
 Vue.use(Vuetify, {
-  components: {
-    // VApp,
-    // VNavigationDrawer,
-    // VFooter,
-    // VToolbar,
-    // transitions
-  },
-  directives: {
-    Ripple
-  },
   theme: {
     primary: colors.deepPurple.darken4, // a color that is not in the material colors palette
     accent: colors.grey.darken3,
