@@ -44,7 +44,7 @@
   margin: 0.5em;
   z-index: 49;
 
-  cursor: pointer;
+  /* cursor: pointer; */
 }
 
 .dev-key-aspect {
@@ -120,10 +120,10 @@ export default {
   },
   methods: {
     onAspectChanged: function (aspectId) {
-      this.$emit('aspect', aspectId);
-      this.aspects.forEach((aspect) => {
-        aspect.key = (aspect.id === aspectId);
-      });
+      // this.$emit('aspect', aspectId);
+      // this.aspects.forEach((aspect) => {
+      //   aspect.key = (aspect.id === aspectId);
+      // });
     }
   }
 };
