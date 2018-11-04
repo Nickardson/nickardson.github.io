@@ -178,6 +178,7 @@ a:hover {
   text-decoration: underline;
 }
 
+/* navbars */
 aside a {
   color: inherit;
 }

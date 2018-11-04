@@ -1,15 +1,15 @@
 <template>
   <div class="navigation-container">
-    <v-toolbar dark height="64">
+    <v-toolbar app dark height="64" clipped-left>
       <v-toolbar-side-icon @click.native.stop="drawer = !drawer" />
       <v-toolbar-title>Taylor Gratzer</v-toolbar-title>
-      
+
       <v-spacer></v-spacer>
       <v-toolbar-items class="hidden-sm-and-down">
         <v-btn :to="item.link" v-for="item in mainItems" :key="item.title" flat>{{ item.title }}</v-btn>
       </v-toolbar-items>
     </v-toolbar>
-    <v-navigation-drawer v-model="drawer" left temporary fixed app>
+    <v-navigation-drawer app v-model="drawer" clipped left mobile-break-point="960" disable-resize-watcher>
       <v-list>
         <v-list-tile v-for="item in items"
             :key="item.title"
