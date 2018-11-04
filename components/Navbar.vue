@@ -19,14 +19,7 @@
           <v-divider v-if="groupItem.type === 'separator'" :key="groupItem.title"></v-divider>
 
           <!-- section header -->
-          <v-list-tile
-            v-if="groupItem.type === 'header'"
-            :key="groupItem.title"
-            nuxt>
-            <v-list-tile-content class="list__tile__content--section">
-              <v-list-tile-title>{{ groupItem.title }}</v-list-tile-title>
-            </v-list-tile-content>
-          </v-list-tile>
+          <v-subheader v-if="groupItem.type === 'header'" :key="groupItem.title">{{ groupItem.title }}</v-subheader>
 
           <!-- single version -->
           <v-list-tile
