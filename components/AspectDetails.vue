@@ -29,7 +29,7 @@
   flex-basis: 0;
 }
 
-@media screen and (max-width: 1000px) {
+@media screen and (max-width: 959px) {
   .half-n-half > * {
     flex-basis: 100%;
   }

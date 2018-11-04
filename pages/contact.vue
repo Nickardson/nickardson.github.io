@@ -26,18 +26,26 @@
         <form v-if="!hasSentFromForm" ref="form" class="needs-validation" @submit="sendMail">
           <h3 v-if="formError" class="form-error">Error: {{formError}}</h3>
           <div class="form-group">
-            <label for="contactReturn">
-              <div>Your Email Address</div>
-              <input v-model="email" type="email" class="form-control" id="contactReturn" placeholder="your@email.com" required>
-            </label>
+            <v-text-field
+              required
+              :rules="emailRules"
+              solo
+              v-model="email"
+              label="Your Email"
+            ></v-text-field>
           </div>
           <div class="form-group">
-            <label for="contactMessage">
-              <div>Your Message</div>
-              <textarea v-model="body" rows="10" class="form-control" id="contactMessage" placeholder="" required></textarea>
-            </label>
+            <v-textarea
+              required
+              :rules="bodyRules"
+              solo
+              name="input-7-4"
+              v-model="body"
+              label="Your Message"
+            ></v-textarea>
           </div>
-          <input :disabled="isSending" type="submit" value="Send"/>
+
+          <v-btn :disabled="isSending" type="submit" color="primary">Send</v-btn>
         </form>
 
         <div v-if="hasSentFromForm">
@@ -111,6 +119,15 @@ export default {
       formError: '',
       isSending: false,
       hasSentFromForm: false,
+
+      bodyRules: [
+        v => !!v || 'Go ahead and write something, long or short.'
+      ],
+
+      emailRules: [
+        v => !!v || 'Please put in an email address so I can mail you back.',
+        v => /.+@.+\..+/.test(v) || 'Email address must be valid.'
+      ]
     };
   },
   methods: {

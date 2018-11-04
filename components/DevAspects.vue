@@ -63,7 +63,7 @@
   color: #E5E4FF;
 }
 
-@media screen and (max-width: 1000px) {
+@media screen and (max-width: 959px) {
   .dev-aspect {
     flex-basis: auto;
     max-width: inherit;

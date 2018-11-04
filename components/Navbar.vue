@@ -71,7 +71,7 @@
   letter-spacing: 0.05em;
 }
 
-@media screen and (max-width: 1000px) {
+@media screen and (max-width: 959px) {
   a.logo-link {
     display: none;
   }

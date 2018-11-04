@@ -125,9 +125,9 @@ hr {
   margin: 0 10vw 0 10vw;
 }
 
-@media screen and (max-width: 1000px) {
+@media screen and (max-width: 959px) {
   body {
-    margin-top: 50px;
+    margin-top: 64px;
   }
   .navigation-container {
     z-index: 999;
