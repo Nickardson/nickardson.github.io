@@ -6,10 +6,9 @@
         <v-container fluid>
           <nuxt />
         </v-container>
+        <Footer></Footer>
       </v-content>
     </main>
-
-    <Footer></Footer>
   </v-app>
 </template>
 
@@ -115,7 +114,7 @@ hr.separator {
   margin-bottom: 40px;
 }
 
-hr {
+hr:not(.v-divider) {
   display: block;
   box-sizing: content-box;
   background: #e5e5e5;
@@ -126,9 +125,6 @@ hr {
 }
 
 @media screen and (max-width: 959px) {
-  body {
-    margin-top: 64px;
-  }
   .navigation-container {
     z-index: 999;
     position: fixed;
@@ -184,6 +180,13 @@ aside a {
 }
 aside a:hover {
   text-decoration: none;
+}
+
+.list__tile__content--section {
+  text-transform: uppercase;
+  opacity: .8;
+  font-size: .9em;
+  justify-content: flex-end;
 }
 
 /* print */
